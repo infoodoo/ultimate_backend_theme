@@ -14,6 +14,12 @@
     font-style: normal;
 }
 
+.o_app_real_icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
 
 
 /* Make the Apps Menu grid perfect on all devices */
@@ -56,7 +62,6 @@
 /* Icon before */
 .o_navbar_apps_menu .dropdown-item::before {
     font-family: "FontAwesome";
-    content: "\f00a";
     font-size: 24px;
     color: #6366f1;
     margin-bottom: 8px;

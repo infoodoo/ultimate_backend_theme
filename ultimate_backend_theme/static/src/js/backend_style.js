@@ -1,20 +1,21 @@
-/** Module to redirect the AppsMenu click to open Home Menu Apps directly */
-odoo.define('ultimate_backend_theme.override_appswitcher', function (require) {
-    "use strict";
+/** @odoo-module **/
 
-    const { patch } = require('web.utils');
-    const Navbar = require('web.NavBar');
+import { patchService } from "@web/core/utils/patch";
+import { menuService } from "@web/webclient/menus/menu_service";
 
-    patch(Navbar.prototype, 'ultimate_backend_theme', {
-        setup() {
-            this._super.apply();
-            this.appsMenuClick = this.appsMenuClick.bind(this);
-        },
+patchService(menuService, {
+    async load() {
+        const menus = await this._super(); // important to keep original behavior
+        const appMenus = Object.values(menus).filter(m => m.parent_id === false);
 
-        appsMenuClick(ev) {
-            ev.preventDefault();
-            ev.stopPropagation();
-            this.env.services.action.doAction('base.action_open_home_menu');
-        }
-    });
+        // Load web_icon_data manually
+        const icons = await this.orm.searchRead('ir.ui.menu', [['parent_id', '=', false]], ['id', 'web_icon_data']);
+        const iconMap = Object.fromEntries(icons.map(i => [i.id, i.web_icon_data]));
+
+        appMenus.forEach(app => {
+            app.web_icon_data = iconMap[app.id] || null;
+        });
+
+        return menus;
+    },
 });

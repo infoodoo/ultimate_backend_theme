@@ -13,7 +13,7 @@
     'assets': {
         'web.assets_backend': [
             'ultimate_backend_theme/static/src/css/backend_style.css',
-            'ultimate_backend_theme/static/src/js/backend_style.js',
+            # 'ultimate_backend_theme/static/src/js/backend_style.js',
             # 'ultimate_backend_theme/static/src/xml/nav_menu.xml',
         ],
         # 'web.assets_common': [
