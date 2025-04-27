@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ultimate_backend_theme.orderline_inherit" t-inherit="web.NavBar.AppsMenu" t-inherit-mode="extension">
+           <xpath expr="//Dropdown" position="replace">
+              <a class="o_navbar_apps_menu" href="/web" role="button" title="Home Menu">
+                  <i class="oi oi-apps" style="font-size: 22px; margin: 10px;" />
+              </a>
+            </xpath>
+    </t>
+</templates>
