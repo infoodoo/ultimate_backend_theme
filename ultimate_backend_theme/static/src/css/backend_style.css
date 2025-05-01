@@ -131,6 +131,12 @@ body.o_web_client {
     box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
 }
 
+
+.o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_sections .dropdown-toggle {
+
+background: transparent !important;
+}
+
 /* ======== LIST VIEW (better table) ======== */
 .o_list_view table {
     background-color: #ffffff;
@@ -182,6 +188,13 @@ body.o_web_client {
     font-weight: 600;
     font-size: 14px;
 }
+.btn-secondary {
+   background-color: white !important;
+   border-radius: 8px;
+    padding: 6px 16px;
+    font-weight: 600;
+    font-size: 14px;
+}
 
 /* ======== FORM VIEW ======== */
 .o_form_view {
@@ -206,3 +219,25 @@ body.o_web_client {
     box-shadow: 0px 5px 15px rgba(99, 102, 241, 0.2);
     color: #1e3a8a;
 }
+
+
+/* ======== FIX SEARCHBAR ======== */
+.o_control_panel .o_searchview {
+    background: #ffffff; /* clean white search bar */
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+.o_control_panel .o_searchview input {
+    background: transparent;
+    border: none;
+    color: #1f2937; /* dark text inside search */
+    font-size: 14px;
+}
+
+.o_control_panel .o_searchview input::placeholder {
+    color: #9ca3af; /* light gray placeholder */
+}
+
+
