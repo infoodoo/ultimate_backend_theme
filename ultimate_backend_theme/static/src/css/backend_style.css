@@ -20,23 +20,19 @@
     margin-bottom: 5px;
 }
 
-
-
-/* Make the Apps Menu grid perfect on all devices */
-.o_navbar_apps_menu .dropdown-menu {
+.o_popover.mw-100.mx-0.dropdown-menu:has(a.o_app) {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns default */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 12px;
-    margin-top: 10px !important;
     min-width: 750px;
     border-radius: 18px;
-    box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
-    background: #ffffff;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
 }
 
-/* Each App Button */
-.o_navbar_apps_menu .dropdown-item {
+
+.o_popover.mw-100.mx-0.dropdown-menu a.dropdown-item.o_app {
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -51,56 +47,41 @@
     transition: all 0.3s;
 }
 
-/* Hover */
-.o_navbar_apps_menu .dropdown-item:hover {
-    background: #eef2ff;
+
+.o_popover.mw-100.mx-0.dropdown-menu a.dropdown-item.o_app:hover {
+    background-color: #eef2ff;
     transform: translateY(-4px);
     box-shadow: 0px 5px 15px rgba(99, 102, 241, 0.2);
     color: #1e3a8a;
 }
 
-/* Icon before */
-.o_navbar_apps_menu .dropdown-item::before {
+.o_popover.mw-100.mx-0.dropdown-menu a.dropdown-item.o_app::before {
     font-family: "FontAwesome";
     font-size: 24px;
     color: #6366f1;
     margin-bottom: 8px;
 }
 
-/* Responsive Tablet */
+
+
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-    .o_navbar_apps_menu .dropdown-menu {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns tablet */
+    .o_navbar_apps_menu .o_dropdown {
+        grid-template-columns: repeat(2, 1fr);
         min-width: 90vw;
-        padding: 10px;
     }
 }
-
-/* Responsive Mobile */
 @media (max-width: 768px) {
-    .o_navbar_apps_menu .dropdown-menu {
-        grid-template-columns: 1fr; /* 1 column on mobile */
+    .o_navbar_apps_menu .o_dropdown {
+        grid-template-columns: 1fr;
         min-width: 95vw;
-        padding: 8px;
     }
-    .o_navbar_apps_menu .dropdown-item {
+    .o_navbar_apps_menu .o_dropdown .o_dropdown_item {
         height: 90px;
         font-size: 13px;
     }
 }
-
-/* Very small screen */
-@media (max-width: 480px) {
-    .o_navbar_apps_menu .dropdown-menu {
-        grid-template-columns: 1fr; /* keep 1 column */
-        padding: 6px;
-    }
-    .o_navbar_apps_menu .dropdown-item {
-        height: 80px;
-        font-size: 12px;
-    }
-}
-
 
 
 
