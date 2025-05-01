@@ -6,6 +6,10 @@
     'description': 'Complete redesign of Odoo Community backend: Light/Dark mode, animated sidebar, kanban customization, modern typography.',
     'author': 'InfoLabWeb',
     'license': 'LGPL-3',
+    'website': "https://infolabweb.odoo.com",
+    'price': '28',
+    'currency': 'USD',
+    'images': ['static/description/icon.gif'],
     'depends': ['web'],
     # 'data': [
     #     'views/assets.xml',
