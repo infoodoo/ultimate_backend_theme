@@ -1,0 +1,18 @@
+body.login {
+    background: linear-gradient(120deg, #0f172a, #1e293b);
+}
+
+.o_login_form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 400px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.o_login_form input {
+    border-radius: 8px;
+    margin-top: 10px;
+}

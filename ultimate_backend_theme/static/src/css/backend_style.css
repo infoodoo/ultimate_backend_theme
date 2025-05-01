@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/ultimate_backend_theme/static/src/fonts/Inter/Inter-Regular.woff2') format('woff2'),
+         url('/ultimate_backend_theme/static/src/fonts/Inter/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/ultimate_backend_theme/static/src/fonts/Inter/Inter-SemiBold.woff2') format('woff2'),
+         url('/ultimate_backend_theme/static/src/fonts/Inter/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.o_app_real_icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+
+
+/* Make the Apps Menu grid perfect on all devices */
+.o_navbar_apps_menu .dropdown-menu {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns default */
+    gap: 10px;
+    padding: 12px;
+    margin-top: 10px !important;
+    min-width: 750px;
+    border-radius: 18px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
+    background: #ffffff;
+}
+
+/* Each App Button */
+.o_navbar_apps_menu .dropdown-item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    height: 110px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    background-color: #f9fafb;
+    transition: all 0.3s;
+}
+
+/* Hover */
+.o_navbar_apps_menu .dropdown-item:hover {
+    background: #eef2ff;
+    transform: translateY(-4px);
+    box-shadow: 0px 5px 15px rgba(99, 102, 241, 0.2);
+    color: #1e3a8a;
+}
+
+/* Icon before */
+.o_navbar_apps_menu .dropdown-item::before {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    color: #6366f1;
+    margin-bottom: 8px;
+}
+
+/* Responsive Tablet */
+@media (max-width: 1024px) {
+    .o_navbar_apps_menu .dropdown-menu {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns tablet */
+        min-width: 90vw;
+        padding: 10px;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .o_navbar_apps_menu .dropdown-menu {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        min-width: 95vw;
+        padding: 8px;
+    }
+    .o_navbar_apps_menu .dropdown-item {
+        height: 90px;
+        font-size: 13px;
+    }
+}
+
+/* Very small screen */
+@media (max-width: 480px) {
+    .o_navbar_apps_menu .dropdown-menu {
+        grid-template-columns: 1fr; /* keep 1 column */
+        padding: 6px;
+    }
+    .o_navbar_apps_menu .dropdown-item {
+        height: 80px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+/* Dropdown Animation */
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.o_navbar_apps_menu .dropdown-menu {
+    animation: fadeInDropdown 0.3s ease;
+}
+
+
+
+/* ======== BACKGROUND ======== */
+body.o_web_client {
+    background-color: #e2e8f0; /* softer, not pure white */
+    color: #1f2937; /* dark gray text */
+}
+
+/* ======== NAVBAR ======== */
+.o_main_navbar {
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+    color: #f8fafc;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+
+.o_main_navbar .o_menu_sections .o_nav_entry, .o_main_navbar .o_menu_sections .dropdown-toggle {
+
+background: transparent !important;
+}
+
+/* ======== LIST VIEW (better table) ======== */
+.o_list_view table {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.o_list_view thead {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.o_list_view tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.o_list_view tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.o_list_view tbody tr:hover {
+    background-color: #cbd5e1;
+}
+
+/* ======== CONTROL PANEL (Fix the title bar under navbar) ======== */
+.o_control_panel {
+    background-color: #e5e7eb; /* Soft grey background */
+    border-bottom: 1px solid #d1d5db; /* Light bottom border */
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.o_control_panel .breadcrumb  {
+    background-color: #e5e7eb; /* soft gray background */
+    border-radius: 8px 8px 0 0;
+    color: #1f2937;
+}
+
+
+
+/* ======== BUTTONS ======== */
+.btn-primary, .btn-success, .btn-info {
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.btn-secondary {
+   background-color: white !important;
+   border-radius: 8px;
+    padding: 6px 16px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ======== FORM VIEW ======== */
+.o_form_view {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ======== KANBAN CARDS ======== */
+.o_kanban_record {
+    background-color: #ffffff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 8px;
+    margin: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+}
+.o_kanban_record:hover {
+    background: #eef2ff;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(99, 102, 241, 0.2);
+    color: #1e3a8a;
+}
+
+
+/* ======== FIX SEARCHBAR ======== */
+.o_control_panel .o_searchview {
+    background: #ffffff; /* clean white search bar */
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+.o_control_panel .o_searchview input {
+    background: transparent;
+    border: none;
+    color: #1f2937; /* dark text inside search */
+    font-size: 14px;
+}
+
+.o_control_panel .o_searchview input::placeholder {
+    color: #9ca3af; /* light gray placeholder */
+}
+
+

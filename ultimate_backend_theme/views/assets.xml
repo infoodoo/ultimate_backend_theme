@@ -1,0 +1,14 @@
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend" name="Backend Assets">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/ultimate_backend_theme/static/src/css/backend_style.css"/>
+            <script type="text/javascript" src="/ultimate_backend_theme/static/src/js/backend_style.js"></script>
+        </xpath>
+    </template>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Login Assets">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/ultimate_backend_theme/static/src/css/login_style.css"/>
+        </xpath>
+    </template>
+</odoo>
